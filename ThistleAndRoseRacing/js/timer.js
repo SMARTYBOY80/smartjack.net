@@ -1,6 +1,5 @@
 // Set the date we're counting down to
-var countDownDate = new Date("April 12, 2024 15:00:00").getTime();
-
+const dates = [new Date("July 20, 2024 15:00:00").getTime(), new Date("August 24, 2024 15:00:00").getTime(), new Date("September 21, 2024 15:00:00").getTime(), new Date("October 26, 2024 15:00:00").getTime()];
 // Update the count down every 1 second
 var x = setInterval(function() {
 
@@ -8,7 +7,7 @@ var x = setInterval(function() {
   var now = new Date().getTime();
 
   // Find the distance between now and the count down date
-  var distance = countDownDate - now;
+  var distance = dates[0] - now;
 
   // Time calculations for days, hours, minutes and seconds
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -24,10 +23,6 @@ var x = setInterval(function() {
 
   // If the count down is finished, write some text
   if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("days").innerHTML = 0 ;
-    document.getElementById("hours").innerHTML = 0 ;
-    document.getElementById("minutes").innerHTML = 0;
-    document.getElementById("seconds").innerHTML = 0 ;
+    dates.shift();
   }
 }, 1000);
