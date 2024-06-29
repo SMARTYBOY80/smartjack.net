@@ -768,9 +768,9 @@ strong {
 /*---------------------------------------
   REVIEWS              
 -----------------------------------------*/
-.reviews-section {
+.season-section {
 
-  background-image: url('../images/wardenLaw.png');
+  background-color: #000000;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1081,6 +1081,11 @@ strong {
   }
 }
 
+@media screen and (max-width: 534px) {
+  #secondsbox{
+    display: none;
+  }
+}
 
 @media screen and (max-width: 480px) {
   h1 {
@@ -1138,6 +1143,12 @@ strong {
   .timeline-container-left::before,
   .timeline-container-right::before {
     top: 13px;
+  }
+}
+
+@media screen and (max-width: 404px) {
+  #secondsbox{
+    display: block;
   }
 }
 
